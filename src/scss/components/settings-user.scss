@@ -1,0 +1,247 @@
+.settings-user {
+  &__inner {
+    height: 100%;
+    padding: 34rem var(--gap-container);
+    overflow-y: auto;
+    @media (max-width: $md) {
+      padding-top: 0;
+    }
+    @media (max-width: $sm) {
+      padding-right: var(--gap-container);
+      padding-left: var(--gap-container);
+    }
+  }
+  &__title {
+    margin: 0 0 20rem;
+    font-weight: bold;
+    @media (max-width: $md) {
+      margin-bottom: var(--gap-fluid);
+      font-size: var(--fs-1);
+    }
+  }
+  &__row {
+  }
+  &__col {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--gap-fluid);
+    &--settings {
+      @media (max-width: $lg) {
+        max-width: 100%;
+        margin-bottom: var(--gap-fluid);
+        flex-basis: 100%;
+      }
+    }
+    &--subscription {
+      @media (max-width: $lg) {
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+    }
+    &--faq {
+    }
+  }
+  &__box {
+    background: $whiteColor;
+    padding: 48rem 24rem;
+    color: $blackColor;
+    border-radius: $radiusMd;
+    @media (max-width: $lg) {
+      padding: 32rem 16rem;
+    }
+    &--profile {
+    }
+    &--whatsapp {
+    }
+    &--useful {
+      height: 100%;
+    }
+    &--subscription {
+    }
+    &--support {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &--faq {
+      margin-top: var(--gap-fluid);
+    }
+    &-header {
+      margin: 0 0 32rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media (max-width: $md) {
+        flex-wrap: wrap;
+      }
+      &-title {
+        margin: 0;
+        font-weight: 600;
+        @media (max-width: $md) {
+          width: 100%;
+        }
+      }
+      &-plan {
+        display: flex;
+        flex-shrink: 0;
+        @media (max-width: $md) {
+          margin: 32rem -4rem 0 0;
+          justify-content: flex-end;
+          font-size: var(--fs-6);
+          flex-grow: 1;
+        }
+        &-name {
+          margin: 0;
+          font-weight: 600;
+          margin: 0 0 0 33rem;
+          @media (max-width: $md) {
+            margin-left: 13rem;
+          }
+          &.is-free {
+            color: #B9B9B9;
+          }
+          &.is-pro {
+            color: $accentColor;
+          }
+        }
+      }
+    }
+    &-profile {
+    }
+    &-whatsapp {
+    }
+    &-item {
+      margin: 0 0 32rem;
+      &-el {
+        max-width: 100%;
+      }
+      &-title {
+        margin: 0 0 4rem;
+        font-weight: 600;
+      }
+      &-text {
+        margin: 0;
+        font-size: var(--fs-8);
+        line-height: $lineHeight2;
+        color: $greyNeutralColor;
+      }
+      &-change {
+        margin-top: 8rem;
+        vertical-align: top;
+      }
+      &-status {
+        margin: 0;
+        &.is-disabled {
+          color: $redColor;
+        }
+      }
+    }
+    &-footer {
+      padding: 32rem 0 0;
+      border-top: 1px solid #B9B9B9;
+      &-action {
+      }
+      &-description {
+        max-width: 116rem;
+        height: 100%;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        font-size: var(--fs-9);
+        line-height: $lineHeight4;
+        color: $greyNeutralColor;
+        @media (max-width: $sm) {
+          max-width: 194rem;
+        }
+      }
+    }
+    &-description {
+      margin: 0 0 12rem;
+      font-size: var(--fs-9);
+      line-height: $lineHeight4;
+      color: $greyNeutralColor;
+    }
+    &-links {
+      &:not(:last-child) {
+        margin-bottom: 32rem;
+      }
+      &-title {
+        margin: 0 0 12rem;
+      }
+    }
+    &-support {
+      &-text {
+        max-width: 400rem;
+        margin: 8rem 0 32rem;
+        font-size: var(--fs-9);
+        line-height: $lineHeight4;
+        color: $greyNeutralColor;
+      }
+    }
+    &-faq {
+      &-card {
+        &:not(:last-child) {
+          margin-bottom: 8rem;
+        }
+      }
+    }
+    &-plan {
+      &-list {
+        &-card {
+          margin-bottom: 32rem;
+        }
+      }
+    }
+    &-subscription {
+      &-line {
+        margin-bottom: 32rem;
+      }
+      &-btn {
+        width: 100%;
+      }
+      &-footer {
+        margin-top: 8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-privacy {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          list-style-type: none;
+          font-weight: 600;
+          font-size: var(--fs-9);
+          line-height: $lineHeight2;
+          li {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            &:not(:last-child) {
+              &:after {
+                margin: 0 4rem;
+                content: '\007C';
+                flex-shrink: 0;
+              }
+            }
+          }
+          a {
+            transition: $transition;
+            &:hover {
+              text-decoration: none;
+              @media (min-width: $lg-mf) {
+                color: $accentColor;
+              }
+            }
+          }
+        }
+        &-desc {
+          margin: 0;
+          font-size: var(--fs-9);
+          color: #B9B9B9;
+        }
+      }
+    }
+  }
+}

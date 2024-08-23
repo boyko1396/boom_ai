@@ -1,0 +1,306 @@
+<aside class="@@el chat-aside">
+  <div class="chat-aside__inner">
+    <header class="chat-aside__header">
+      <a href="chat.html" class="logo logo--size-sm chat-aside__header-logo">
+        <picture class="logo__img">
+          <img src="images/logo-black.svg" width="143" height="34" alt="Boom AI">
+        </picture>
+      </a>
+      <button type="button" class="js-chat-menu-close d-md-block chat-aside__header-btn-close">
+        <svg class="u-icon">
+          <use xlink:href="images/icons/icons.svg#menu-close"></use>
+        </svg>
+      </button>
+      <a href="chat.html" class="btn btn--size-md btn--theme-accent-outline chat-aside__header-btn-new-chat">
+        <span class="btn__inner">
+          <span class="btn__title">Новый чат</span>
+          <span class="btn__icon btn__icon--dir-rtl">
+            <svg class="u-icon">
+              <use xlink:href="images/icons/icons.svg#plus-type-2"></use>
+            </svg>
+          </span>
+        </span>
+      </a>
+      <ul class="chat-aside__header-nav">
+        <li class="chat-aside__header-nav-item">
+          <button type="button" class="js-chat-tab-nav chat-aside__header-nav-btn is-active" data-tab-nav="chat-tools">Инструменты</button>
+        </li>
+        <li class="chat-aside__header-nav-item">
+          <button type="button" class="js-chat-tab-nav chat-aside__header-nav-btn" data-tab-nav="chat-history">История</button>
+        </li>
+      </ul>
+      <ul class="js-chat-subnav chat-aside__header-nav">
+        <li class="chat-aside__header-nav-item">
+          <button type="button" class="js-chat-tabsub-nav chat-aside__header-nav-btn is-active" data-tab-nav="chat-history-list">История чатов</button>
+        </li>
+        <li class="chat-aside__header-nav-item">
+          <button type="button" class="js-chat-tabsub-nav chat-aside__header-nav-btn" data-tab-nav="chat-history-tools">Инструменты</button>
+        </li>
+      </ul>
+    </header>
+    <div class="hide-scrollbar chat-aside__body">
+      <div class="js-chat-tab-content chat-aside__body-tab-content is-show" data-tab-content="chat-tools">
+        <div class="chat-aside__body-list">
+          <a href="chat_images.html" class="chat-services-card chat-services-card--theme-grey chat-aside__body-list-card">
+            <div class="chat-services-card__inner">
+              <picture class="chat-services-card__picture">
+                <source 
+                  srcset="images/chat-services-card-1.webp 1x, images/chat-services-card-1@2x.webp 2x" 
+                  type="image/webp">
+                <img 
+                  src="images/chat-services-card-1.png" 
+                  srcset="images/chat-services-card-1.png 1x, images/chat-services-card-1@2x.png 2x" 
+                  alt="Генератор изображений">
+              </picture>
+              <div class="chat-services-card__content">
+                <p class="chat-services-card__title">Генератор изображений</p>
+                <div class="u-content chat-services-card__text">
+                  <p>Превратите слова в изображения</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <button type="button" data-modal="popup-chat-article-info" class="chat-services-card chat-services-card--theme-grey chat-aside__body-list-card">
+            <div class="chat-services-card__inner">
+              <div class="chat-services-card__picture">
+                <svg class="u-icon">
+                  <use xlink:href="images/icons/icons.svg#upload-file"></use>
+                </svg>
+              </div>
+              <div class="chat-services-card__content">
+                <p class="chat-services-card__title">Загрузи и спроси</p>
+                <div class="u-content chat-services-card__text">
+                  <p>Спросите что угодно о документе</p>
+                </div>
+              </div>
+            </div>
+          </button>
+          <button type="button" data-modal="popup-chat-link-youtube" class="chat-services-card chat-services-card--theme-grey chat-aside__body-list-card">
+            <div class="chat-services-card__inner">
+              <div class="chat-services-card__picture">
+                <svg class="u-icon">
+                  <use xlink:href="images/icons/icons.svg#youtube-color"></use>
+                </svg>
+              </div>
+              <div class="chat-services-card__content">
+                <p class="chat-services-card__title">YouTube и спроси</p>
+                <div class="u-content chat-services-card__text">
+                  <p>Спросите что угодно о видео с&nbsp;YouTube</p>
+                </div>
+              </div>
+            </div>
+          </button>
+          <button type="button" data-modal="popup-chat-youtube" class="chat-services-card chat-services-card--theme-grey chat-aside__body-list-card">
+            <div class="chat-services-card__inner">
+              <div class="chat-services-card__picture">
+                <svg class="u-icon">
+                  <use xlink:href="images/icons/icons.svg#youtube-color"></use>
+                </svg>
+              </div>
+              <div class="chat-services-card__content">
+                <p class="chat-services-card__title">Краткое содержание YouTube-видео</p>
+                <div class="u-content chat-services-card__text">
+                  <p>Получите детальную выжимку из&nbsp;видео с YouTube</p>
+                </div>
+              </div>
+            </div>
+          </button>
+          <button type="button" data-modal="popup-chat-article" class="chat-services-card chat-services-card--theme-grey chat-aside__body-list-card">
+            <div class="chat-services-card__inner">
+              <div class="chat-services-card__picture">
+                <svg class="u-icon">
+                  <use xlink:href="images/icons/icons.svg#file"></use>
+                </svg>
+              </div>
+              <div class="chat-services-card__content">
+                <p class="chat-services-card__title">Краткое содержание статьи</p>
+                <div class="u-content chat-services-card__text">
+                  <p>Получите детальную выжимку из&nbsp;статьи</p>
+                </div>
+              </div>
+            </div>
+          </button>
+          <button type="button" data-modal="popup-chat-link" class="chat-services-card chat-services-card--theme-grey chat-aside__body-list-card">
+            <div class="chat-services-card__inner">
+              <div class="chat-services-card__picture">
+                <svg class="u-icon">
+                  <use xlink:href="images/icons/icons.svg#earth"></use>
+                </svg>
+              </div>
+              <div class="chat-services-card__content">
+                <p class="chat-services-card__title">Вставь ссылку и&nbsp;спроси</p>
+                <div class="u-content chat-services-card__text">
+                  <p>Спросите или найдите что угодно на&nbsp;сайте</p>
+                </div>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="js-chat-tab-content chat-aside__body-tab-content" data-tab-content="chat-history">
+        <div class="js-chat-tabsub-content chat-aside__body-tabsub-content is-show" data-tab-content="chat-history-list">
+          <div class="chat-aside__body-history">
+            <div class="history-item chat-aside__body-history-item">
+              <div class="history-item__inner">
+                <div class="history-item__header">
+                  <div class="history-item__title">
+                    <a href="#" class="history-item__link">Act like a Professor. Every time I write you fyi, ...</a>
+                  </div>
+                </div>
+                <div class="history-item__content">
+                  <p class="history-item__description">Certainly! Feel free to ask me anything you'd like to know, and I'll be happy to share interesting i...</p>
+                </div>
+                <div class="history-item__footer">
+                  <div class="history-item__action">
+                    <button type="button" class="history-item__action-btn">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#edit"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="history-item__action-btn">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#delete"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="history-item chat-aside__body-history-item">
+              <div class="history-item__inner">
+                <div class="history-item__header">
+                  <div class="history-item__title">
+                    <a href="#" class="history-item__link">Act like a Professor. Every time I write you fyi, ...</a>
+                  </div>
+                </div>
+                <div class="history-item__content">
+                  <p class="history-item__description">Certainly! Feel free to ask me anything you'd like to know, and I'll be happy to share interesting i...</p>
+                </div>
+                <div class="history-item__footer">
+                  <div class="history-item__action">
+                    <button type="button" class="history-item__action-btn">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#edit"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="history-item__action-btn">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#delete"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="js-chat-tabsub-content chat-aside__body-tabsub-content" data-tab-content="chat-history-tools">
+          <div class="chat-aside__body-history">
+            <div class="history-item chat-aside__body-history-item">
+              <div class="history-item__inner">
+                <div class="history-item__header">
+                  <div class="history-item__media">
+                    <picture class="history-item__picture">
+                      <source 
+                        srcset="images/chat-services-card-1.webp 1x, images/chat-services-card-1@2x.webp 2x" 
+                        type="image/webp">
+                      <img 
+                        src="images/chat-services-card-1.png" 
+                        srcset="images/chat-services-card-1.png 1x, images/chat-services-card-1@2x.png 2x" 
+                        alt="Абстрактная фигура, белый, черный и синий цвета, 3d рендер">
+                    </picture>
+                  </div>
+                  <div class="history-item__title">
+                    <a href="#" class="history-item__link">Абстрактная фигура, белый, черный и синий цвета, 3d рендер</a>
+                  </div>
+                </div>
+                <div class="history-item__content">
+                  <p class="history-item__description">Абстрактная фигура, белый, черный и синий цвета, 3d рендер</p>
+                </div>
+                <div class="history-item__footer">
+                  <div class="history-item__action">
+                    <button type="button" class="history-item__action-btn">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#edit"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="history-item__action-btn">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#delete"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="history-item chat-aside__body-history-item">
+              <div class="history-item__inner">
+                <div class="history-item__header">
+                  <div class="history-item__media">
+                    <picture class="history-item__picture">
+                      <source 
+                        srcset="images/chat-services-card-1.webp 1x, images/chat-services-card-1@2x.webp 2x" 
+                        type="image/webp">
+                      <img 
+                        src="images/chat-services-card-1.png" 
+                        srcset="images/chat-services-card-1.png 1x, images/chat-services-card-1@2x.png 2x" 
+                        alt="Абстрактная фигура, белый, черный и синий цвета, 3d рендер">
+                    </picture>
+                  </div>
+                  <div class="history-item__title">
+                    <a href="#" class="history-item__link">Абстрактная фигура, белый, черный и синий цвета, 3d рендер</a>
+                  </div>
+                </div>
+                <div class="history-item__content">
+                  <p class="history-item__description">Абстрактная фигура, белый, черный и синий цвета, 3d рендер</p>
+                </div>
+                <div class="history-item__footer">
+                  <div class="history-item__action">
+                    <button type="button" class="history-item__action-btn">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#edit"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="history-item__action-btn">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#delete"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="chat-aside__footer">
+      <ul class="chat-aside__footer-nav">
+        <li class="chat-aside__footer-nav-item">
+          <a href="chat.html" class="btn btn--size-md btn--theme-grey chat-aside__footer-nav-btn is-active">
+            <span class="btn__inner">
+              <span class="btn__icon btn__icon--dir-ltr">
+                <svg class="u-icon">
+                  <use xlink:href="images/icons/icons.svg#chat"></use>
+                </svg>
+              </span>
+              <span class="btn__title">Чат</span>
+            </span>
+          </a>
+        </li>
+        <li class="chat-aside__footer-nav-item">
+          <a href="settings.html" class="btn btn--size-md btn--theme-grey chat-aside__footer-nav-btn">
+            <span class="btn__inner">
+              <span class="btn__icon btn__icon--dir-ltr">
+                <svg class="u-icon">
+                  <use xlink:href="images/icons/icons.svg#settings"></use>
+                </svg>
+              </span>
+              <span class="btn__title">Настройки</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </div>
+</aside>

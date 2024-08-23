@@ -1,0 +1,134 @@
+.page {
+  padding: 140rem 0 120rem;
+  position: relative;
+  @media (max-width: $lg) {
+    padding-top: calc(var(--header-height) + 30rem);
+    padding-bottom: 90rem;
+  }
+  &__container {
+  }
+  &__breadcrumbs {
+    margin: 0 0 30rem;
+    @media (max-width: $lg) {
+      justify-content: center;
+      display: flex;
+    }
+  }
+  &__bg {
+    @extend %img-cover;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: -60rem;
+    left: 0;
+    pointer-events: none;
+    z-index: -1;
+    &:before {
+      background: rgba($blackColor, .35);
+      width: 100%;
+      height: 100%;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+  }
+  &__contacts {
+    &-block {
+      background: $greyLightColor;
+      width: 100%;
+      max-width: 588rem;
+      margin: 0 auto;
+      padding: 40rem 50rem 50rem;
+      border-radius: $radiusXl;
+      @media (max-width: $lg) {
+        padding: 36rem var(--gap-container);
+        border-radius: $radiusSemi;
+      }
+    }
+    &-title {
+      margin: 0 0 15rem;
+      text-align: center;
+      @media (max-width: $lg) {
+        margin-bottom: 10rem;
+      }
+    }
+    &-subtitle {
+      max-width: 416rem;
+      margin: 0 auto 40rem;
+      text-align: center;
+      @media (max-width: $lg) {
+        margin-bottom: 30rem;
+      }
+    }
+    &-form {
+      &-input {
+        & + & {
+          margin-top: 5rem;
+        }
+      }
+      &-footer {
+        margin: 20rem 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: $lg) {
+          margin-top: 15rem;
+          flex-wrap: wrap;
+        }
+      }
+      &-btn {
+        @media (max-width: $lg) {
+          width: 100%;
+        }
+      }
+      &-restore {
+        font-size: var(--fs-8);
+        @media (max-width: $lg) {
+          max-width: 100%;
+          flex-basis: 100%;
+          margin-bottom: 15rem;
+          text-align: left;
+          order: -1;
+        }
+        a {
+          color: $accentColor;
+          transition: $transition;
+          &:hover {
+            @media (min-width: $lg-mf) {
+            }
+          }
+        }
+      }
+    }
+    &-privacy {
+      margin: 10rem 0 0;
+      @media (max-width: $lg) {
+        text-align: center;
+      }
+    }
+  }
+  &__title {
+    margin: 0 0 70rem;
+    @media (max-width: $lg) {
+      margin-bottom: 35rem;
+      text-align: center;
+    }
+  }
+  &__privacy {
+    &-row {
+    }
+    &-col {
+      &--content {
+        @media (max-width: $lg) {
+          max-width: 100%;
+          flex-basis: 100%;
+        }
+      }
+    }
+  }
+  &__text {
+    color: $blackLightColor;
+  }
+}

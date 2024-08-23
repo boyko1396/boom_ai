@@ -1,0 +1,22 @@
+.faq {
+  padding: 60rem 0;
+  @media (max-width: $lg) {
+    padding: 45rem 0 90rem;
+  }
+  &__container {
+  }
+  &__header {
+    margin: 0 0 70rem;
+    text-align: center;
+    @media (max-width: $lg) {
+      margin-bottom: 35rem;
+    }
+  }
+  &__list {
+    &-card {
+      &:not(:last-child) {
+        margin-bottom: 8rem;
+      }
+    }
+  }
+}

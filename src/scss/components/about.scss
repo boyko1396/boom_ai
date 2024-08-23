@@ -1,0 +1,28 @@
+.about {
+  padding: 60rem 0;
+  @media (max-width: $lg) {
+    padding: 45rem 0;
+  }
+  &__container {
+  }
+  &__header {
+    margin: 0 0 70rem;
+    text-align: center;
+    @media (max-width: $lg) {
+      margin-bottom: 35rem;
+    }
+  }
+  &__list {
+    margin-bottom: var(--gap-fluid-);
+    &-col {
+      margin-bottom: var(--gap-fluid);
+      @media (max-width: $sm) {
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+    }
+    &-card {
+      height: 100%;
+    }
+  }
+}

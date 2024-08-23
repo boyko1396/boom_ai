@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Boom AI -  Modal'
+  })
+  <body class="u-scrollbar">
+
+    <div id="root" class="site">
+      <div class="site__inner">
+        <style>
+          .modal-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 10rem;
+          }
+        </style>
+        <div class="modal-page">
+          <p>
+            <button type="button" class="btn btn--size-md btn--theme-accent-fill" data-modal="popup-registration">
+              <span class="btn__inner">
+                <span class="btn__title">popup-registration</span>
+              </span>
+            </button>
+          </p>
+          <p>
+            <button type="button" class="btn btn--size-md btn--theme-accent-fill" data-modal="popup-login">
+              <span class="btn__inner">
+                <span class="btn__title">popup-login</span>
+              </span>
+            </button>
+          </p>
+          <p>
+            <button type="button" class="btn btn--size-md btn--theme-accent-fill" data-modal="popup-restore">
+              <span class="btn__inner">
+                <span class="btn__title">popup-restore</span>
+              </span>
+            </button>
+          </p>
+          <p>
+            <button type="button" class="btn btn--size-md btn--theme-accent-fill" data-modal="popup-change-password">
+              <span class="btn__inner">
+                <span class="btn__title">popup-change-password</span>
+              </span>
+            </button>
+          </p>
+          <p>
+            <button type="button" class="btn btn--size-md btn--theme-accent-fill" data-modal="popup-cancel-subscription">
+              <span class="btn__inner">
+                <span class="btn__title">popup-cancel-subscription</span>
+              </span>
+            </button>
+          </p>
+          <p>
+            <button type="button" class="btn btn--size-md btn--theme-accent-fill" data-modal="popup-chat-article-info">
+              <span class="btn__inner">
+                <span class="btn__title">popup-chat-article-info</span>
+              </span>
+            </button>
+          </p>
+          <p>
+            <button type="button" class="btn btn--size-md btn--theme-accent-fill" data-modal="popup-chat-article">
+              <span class="btn__inner">
+                <span class="btn__title">popup-chat-article</span>
+              </span>
+            </button>
+          </p>
+          <p>
+            <button type="button" class="btn btn--size-md btn--theme-accent-fill" data-modal="popup-chat-link">
+              <span class="btn__inner">
+                <span class="btn__title">popup-chat-link</span>
+              </span>
+            </button>
+          </p>
+          <p>
+            <button type="button" class="btn btn--size-md btn--theme-accent-fill" data-modal="popup-chat-link-youtube">
+              <span class="btn__inner">
+                <span class="btn__title">popup-chat-link-youtube</span>
+              </span>
+            </button>
+          </p>
+          <p>
+            <button type="button" class="btn btn--size-md btn--theme-accent-fill" data-modal="popup-chat-youtube">
+              <span class="btn__inner">
+                <span class="btn__title">popup-chat-youtube</span>
+              </span>
+            </button>
+          </p>
+        </div>
+      </div>
+      @@include('html/modal.html')
+    </div>
+
+    @@include('html/script.html')
+  </body>
+</html>

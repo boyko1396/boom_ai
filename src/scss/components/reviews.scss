@@ -1,0 +1,37 @@
+.reviews {
+  padding: 60rem 0;
+  @media (max-width: $lg) {
+    padding: 45rem 0;
+  }
+  &__container {
+  }
+  &__header {
+    margin: 0 0 8rem;
+    text-align: center;
+    @media (max-width: $sm) {
+      margin-bottom: 35rem;
+    }
+  }
+  &__slider-control {
+    margin: 0 0 30rem;
+    display: flex;
+    justify-content: flex-end;
+    @media (max-width: $sm) {
+      display: none;
+    }
+  }
+  &__slider {
+    border-radius: $radiusSemi;
+    .swiper-slide {
+      height: initial;
+    }
+    &-card {
+      height: 100%;
+    }
+    &-pagination {
+      @media (min-width: $sm-mf) {
+        display: none;
+      }
+    }
+  }
+}

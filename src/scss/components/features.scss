@@ -1,0 +1,45 @@
+.features {
+  padding: 120rem 0 60rem;
+  @media (max-width: $lg) {
+    padding: 90rem 0 45rem;
+  }
+  &__container {
+  }
+  &__row {
+  }
+  &__col {
+    &--title {
+      align-self: flex-start;
+      position: sticky;
+      top: calc(var(--header-height) + var(--gap-container));
+      @media (max-width: $xs) {
+        max-width: 100%;
+        flex-basis: 100%;
+        position: relative;
+        top: 0;
+      }
+    }
+    &--list {
+      @media (max-width: $xs) {
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+    }
+  }
+  &__header {
+    @media (max-width: $xs) {
+      margin-bottom: 35rem;
+      text-align: center;
+    }
+  }
+  &__list {
+    &-card {
+      &:not(:last-child) {
+        margin-bottom: 40rem;
+        @media (max-width: $xs) {
+          margin-bottom: 20rem;
+        }
+      }
+    }
+  }
+}

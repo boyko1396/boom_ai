@@ -1,0 +1,102 @@
+.footer {
+  background: $blackColor;
+  padding: 86rem 0;
+  color: $whiteColor;
+  border-radius: $radiusXl $radiusXl 0 0;
+  @media (max-width: $md) {
+    padding: 50rem 0;
+    text-align: center;
+    border-radius: $radiusSemi $radiusSemi 0 0;
+  }
+  &__container {
+  }
+  &__row {
+  }
+  &__col {
+    & + & {
+      @media (max-width: $md) {
+        margin-top: 40rem;
+      }
+    }
+    &--logo {
+      @media (max-width: $md) {
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+    }
+    &--nav {
+      @media (max-width: $md) {
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+    }
+    &--action {
+      @media (max-width: $md) {
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+    }
+  }
+  &__logo {
+    margin: 0 0 30rem;
+    @media (max-width: $md) {
+      margin-bottom: 0;
+    }
+  }
+  &__copyright {
+    margin: 0;
+    font-size: var(--fs-9);
+    color: $greyNeutralColor;
+    @media (max-width: $md) {
+      margin-top: 60rem;
+    }
+  }
+  &__nav {
+    &-list {
+      margin: 0 -30rem 0 0;
+      padding: 0;
+      list-style-type: none;
+      @media (max-width: $md) {
+        margin-right: 0;
+      }
+    }
+    &-title {
+      margin: 0 0 30rem;
+      font-size: 23rem;
+      color: $greyNeutralColor;
+      @media (max-width: $lg) {
+        font-size: 18rem;
+      }
+      @media (max-width: $md) {
+        margin-bottom: 25rem;
+      }
+    }
+    &-item {
+      margin: 0;
+      padding: 0;
+      &:not(:last-child) {
+        margin-bottom: 15rem;
+      }
+    }
+    &-link {
+      @extend %area-click;
+      font-size: var(--fs-6);
+      transition: $transition;
+      @media (max-width: $lg) {
+        font-size: 16rem;
+      }
+      &:hover {
+        text-decoration: none;
+        @media (min-width: $lg-mf) {
+          color: $accentColor;
+        }
+      }
+    }
+  }
+  &__action {
+    display: flex;
+    justify-content: flex-end;
+    &-btn {
+    }
+  }
+}

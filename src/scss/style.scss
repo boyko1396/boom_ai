@@ -1,0 +1,46 @@
+@use 'sass:math';
+
+/** Local font inclusion from the "./src/fonts" folder */
+@import 'config/fonts';
+
+/** Variable inclusion */
+@import 'config/vars';
+
+/** Inclusion of sass functions, mixins, and style extends */
+@import 'config/functions';
+@import 'config/mixins';
+@import 'config/patternSelectors';
+
+/** Reset */
+@import 'config/default';
+
+/** Libraries */
+@import 'libs/swiper';
+@import 'libs/intlTelInput';
+
+/** Common parameters, templates, and utility classes */
+@import 'config/media';
+@import 'config/base';
+
+/** Common BEM blocks used throughout the project */
+@import 'config/common';
+@import 'components/intlTelInput';
+@import 'components/popup';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/page';
+@import 'components/chat-header-mobile';
+@import 'components/intro';
+@import 'components/features';
+@import 'components/whom';
+@import 'components/appeal-section';
+@import 'components/peculiarities';
+@import 'components/about';
+@import 'components/reviews';
+@import 'components/faq';
+@import 'components/chat-aside';
+@import 'components/chat-main';
+@import 'components/settings-user';
+@import 'components/chat-layout';
+
+/** Inclusion of styles for individual blocks and sections */

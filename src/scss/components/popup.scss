@@ -1,0 +1,222 @@
+.popup {
+  background: rgba($blackColor, .8);
+  width: 100%;
+  width: 100vw;
+  padding: var(--gap-fluid);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  transition: all .4s ease-in-out;
+  transition-property: visibility, opacity;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  z-index: 2000;
+  @media (max-width: $lg) {
+    padding-top: 50rem;
+  }
+  &:not(.is-open) {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    .popup__content {
+      transform: translateY(-20vh);
+      opacity: 0;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+  }
+  &__btn-close {
+    @extend %area-click, %btn-reset;
+    width: 24rem;
+    height: 24rem;
+    @media (max-width: $lg) {
+      margin: 0 0 6rem auto;
+      display: flex;
+      color: $whiteColor;
+      position: absolute;
+      right: 0;
+      bottom: 100%;
+    }
+    .u-icon {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__content {
+    width: 100%;
+    max-width: 480rem;
+    margin: 0 auto;
+    transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+    position: relative;
+    &--size {
+      &-sm {
+        max-width: 586rem;
+      }
+      &-lg {
+        max-width: 1200rem;
+        @media (max-width: $lg) {
+          max-width: 586rem;
+        }
+      }
+    }
+    &--theme {
+      &-grey {
+        background: $greyLightColor;
+        color: $blackColor;
+        border-radius: $radiusXl;
+        @media (max-width: $lg) {
+          border-radius: $radiusSemi;
+        }
+      }
+      &-transparent {
+        background: transparent;
+        color: $blackColor;
+      }
+      &-white {
+        background: $whiteColor;
+        color: $blackColor;
+        border-radius: $radiusXl;
+        @media (max-width: $lg) {
+          border-radius: $radiusSemi;
+        }
+      }
+    }
+  }
+  &__login {
+    display: flex;
+    &-info {
+      max-width: 57.5%;
+      padding-right: calc(1 * (24rem + 4.5%));
+      border-radius: $radiusXl;
+      flex: 0 0 57.5%;
+      overflow: hidden;
+      @media (max-width: $lg) {
+        display: none;
+      }
+    }
+    &-main {
+      background: $greyLightColor;
+      min-height: 583rem;
+      margin-left: calc(-1 * (24rem + 4.5%));
+      padding: 40rem 50rem 50rem;
+      border-radius: $radiusXl;
+      flex-grow: 1;
+      position: relative;
+      z-index: 1;
+      @media (max-width: $lg) {
+        min-height: 0;
+        margin-left: 0;
+        padding: 36rem var(--gap-container);
+        border-radius: $radiusSemi;
+      }
+    }
+  }
+  &__form {
+    padding: 80rem 48rem;
+    @media (max-width: $lg) {
+      padding: 36rem var(--gap-container);
+    }
+    &-title {
+      margin: 0 0 25rem;
+      line-height: $lineHeight5;
+      text-align: center;
+      @media (max-width: $lg) {
+        margin-bottom: 30rem;
+      }
+    }
+    &-input {
+      & + & {
+        margin-top: 12rem;
+      }
+    }
+    &-footer {
+      margin: 25rem 0 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .btn-group {
+        @media (max-width: $lg) {
+          width: 100%;
+        }
+      }
+      .btn {
+        @media (max-width: $lg) {
+          width: 100%;
+        }
+      }
+      .btn-group__col {
+        @media (max-width: $lg) {
+          flex-grow: 1;
+        }
+      }
+    }
+    &-btn {
+      @media (max-width: $lg) {
+        width: 100%;
+      }
+    }
+    &-restore {
+      font-size: var(--fs-8);
+      a {
+        color: $accentColor;
+        transition: $transition;
+        &:hover {
+          @media (min-width: $lg-mf) {
+          }
+        }
+      }
+    }
+  }
+  &__inner {
+    padding: 48rem 24rem;
+    @media (max-width: $md) {
+      padding: 32rem 16rem;
+    }
+  }
+  &__chat-form {
+    &-wrapper {
+    }
+    &-header {
+      margin-bottom: 25rem;
+    }
+    &-title {
+      max-width: 400rem;
+      margin: 0 auto 15rem;
+      font-weight: normal;
+      line-height: $lineHeight5;
+      text-align: center;
+    }
+    &-subtitle {
+      margin: 0 0 25rem;
+      text-align: center;
+      @media (max-width: $sm) {
+        max-width: 76%;
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+    &-input {
+      margin-bottom: 8rem;
+    }
+    &-upload-file {
+      margin-bottom: 8rem;
+    }
+    &-message {
+    }
+    &-footer {
+      margin-top: 25rem;
+      display: flex;
+      justify-content: center;
+    }
+    &-btn {
+      min-width: 220rem;
+      @media (max-width: $sm) {
+        width: 100%;
+      }
+    }
+  }
+}

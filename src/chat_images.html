@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Boom AI - Chat images'
+  })
+  <body class="u-scrollbar">
+
+    <div id="root" class="site">
+      <div class="site__inner">
+        <main role="main" class="site__main">
+          <!-- chat-layout BEGIN -->
+          <div class="chat-layout">
+            <div class="chat-layout__container">
+              <div class="chat-layout__inner">
+                <!-- chat-header-mobile BEGIN -->
+                @@include('html/components/chat-header-mobile.html')
+                <!-- chat-header-mobile END -->
+                <!-- chat-aside BEGIN -->
+                @@include('html/components/chat-aside.html', {
+                  'el': 'chat-layout__aside'
+                })
+                <!-- chat-aside END -->
+                <div class="chat-main chat-layout__main">
+                  <div class="chat-main__inner">
+                    <header class="chat-main__header">
+                      <div class="boom-appeal boom-appeal--theme-accent-light chat-main__boom-appeal">
+                        <div class="boom-appeal__inner">
+                          <div class="boom-appeal__logo">
+                            <picture class="boom-appeal__logo-img">
+                              <img src="images/logo-black.svg" width="67" height="17" alt="AI Suno">
+                            </picture>
+                          </div>
+                          <div class="boom-appeal__content">
+                            <div class="u-content boom-appeal__text">
+                              <p>Приветствую тебя, искатель визуальных чудес! Приготовьтесь удивляться, ведь Boom&nbsp;AI объединяет знания с генерацией изображений, чтобы обеспечить вам по-настоящему захватывающий опыт. Что я могу визуализировать для вас сегодня?</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </header>
+                    <div class="u-scrollbar chat-main__body"></div>
+                    <footer class="chat-main__footer">
+                      <div class="chat-main__footer-form">
+                        <form action="#" class="chat-main__footer-form-el">
+                          <textarea name="message" rows="" cols="" class="u-textarea u-textarea--theme-white u-textarea--size-md chat-main__footer-form-textarea" placeholder="Напишите ваше сообщение"></textarea>
+                          <div class="chat-main__footer-form-aside">
+                            <p class="chat-main__footer-form-max-symbol">0/10000</p>
+                            <button type="button" class="btn-send btn-send--size-md btn-send--theme-accent chat-main__footer-form-btn-send" title="Отправить">
+                              <span class="btn-send__inner">
+                                <span class="visually-hidden btn-send__title">Отправить сообщение</span>
+                                <span class="btn-send__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#send"></use>
+                                  </svg>
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#arrow-type-1"></use>
+                                  </svg>
+                                </span>
+                              </span>
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </footer>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- chat-layout END -->
+        </main>
+      </div>
+      @@include('html/modal.html')
+    </div>
+
+    @@include('html/script.html')
+  </body>
+</html>

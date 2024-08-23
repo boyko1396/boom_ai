@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Boom AI - Chat images generation'
+  })
+  <body class="u-scrollbar">
+
+    <div id="root" class="site">
+      <div class="site__inner">
+        <main role="main" class="site__main">
+          <!-- chat-layout BEGIN -->
+          <div class="chat-layout">
+            <div class="chat-layout__container">
+              <div class="chat-layout__inner">
+                <!-- chat-header-mobile BEGIN -->
+                @@include('html/components/chat-header-mobile.html')
+                <!-- chat-header-mobile END -->
+                <!-- chat-aside BEGIN -->
+                @@include('html/components/chat-aside.html', {
+                  'el': 'chat-layout__aside'
+                })
+                <!-- chat-aside END -->
+                <div class="chat-main chat-layout__main">
+                  <div class="chat-main__inner">
+                    <div class="u-scrollbar chat-main__body">
+                      <div class="chat-main__body-message-list">
+                        <div class="chat-message chat-message--user chat-main__message">
+                          <div class="chat-message__inner">
+                            <div class="chat-message__header">
+                              <picture class="chat-message__picture">
+                                <img src="images/chat-message-2.png">
+                              </picture>
+                              <div class="chat-message__question">Абстрактная фигура, белый, черный и синий цвета, 3d рендер</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="chat-message chat-message--bot chat-main__message">
+                          <div class="chat-message__inner">
+                            <div class="chat-message__header">
+                              <picture class="chat-message__picture">
+                                <img src="images/chat-message-1.png">
+                              </picture>
+                              <div class="chat-message__question">Абстрактная фигура, белый, черный и синий цвета, 3d рендер</div>
+                            </div>
+                            <div class="chat-message__images">
+                              <div class="chat-message__images-col">
+                                <picture class="chat-message__images-item">
+                                  <img src="images/answer-1.svg">
+                                </picture>
+                              </div>
+                              <div class="chat-message__images-col">
+                                <picture class="chat-message__images-item">
+                                  <img src="images/answer-1.svg">
+                                </picture>
+                              </div>
+                            </div>
+                            <div class="btn-group btn-group--gap-sm chat-message__action">
+                              <div class="btn-group__inner">
+                                <div class="btn-group__col">
+                                  <button type="button" class="btn btn--size-sm btn--theme-grey-outline btn-group__el">
+                                    <span class="btn__inner">
+                                      <span class="btn__icon btn__icon--dir-ltr">
+                                        <svg class="u-icon">
+                                          <use xlink:href="images/icons/icons.svg#copy"></use>
+                                        </svg>
+                                      </span>
+                                      <span class="btn__title">Скопировать</span>
+                                    </span>
+                                  </button>
+                                </div>
+                                <div class="btn-group__col">
+                                  <button type="button" class="btn btn--size-sm btn--theme-grey-outline btn-group__el">
+                                    <span class="btn__inner">
+                                      <span class="btn__icon btn__icon--dir-ltr">
+                                        <svg class="u-icon">
+                                          <use xlink:href="images/icons/icons.svg#details"></use>
+                                        </svg>
+                                      </span>
+                                      <span class="btn__title">Уточнить детали</span>
+                                    </span>
+                                  </button>
+                                </div>
+                                <div class="btn-group__col">
+                                  <button type="button" class="btn btn--size-sm btn--theme-grey-outline btn-group__el">
+                                    <span class="btn__inner">
+                                      <span class="btn__icon btn__icon--dir-ltr">
+                                        <svg class="u-icon">
+                                          <use xlink:href="images/icons/icons.svg#like"></use>
+                                        </svg>
+                                      </span>
+                                      <span class="btn__title">Нравится</span>
+                                    </span>
+                                  </button>
+                                </div>
+                                <div class="btn-group__col">
+                                  <button type="button" class="btn btn--size-sm btn--theme-grey-outline btn-group__el">
+                                    <span class="btn__inner">
+                                      <span class="btn__icon btn__icon--dir-ltr">
+                                        <svg class="u-icon">
+                                          <use xlink:href="images/icons/icons.svg#dislike"></use>
+                                        </svg>
+                                      </span>
+                                      <span class="btn__title">Не нравится</span>
+                                    </span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <footer class="chat-main__footer">
+                      <div class="chat-main__footer-form">
+                        <form action="#" class="chat-main__footer-form-el">
+                          <textarea name="message" rows="" cols="" class="u-textarea u-textarea--theme-white u-textarea--size-md chat-main__footer-form-textarea" placeholder="Напишите ваше сообщение"></textarea>
+                          <div class="chat-main__footer-form-aside">
+                            <p class="chat-main__footer-form-max-symbol">0/10000</p>
+                            <button type="button" class="btn-send btn-send--size-md btn-send--theme-accent chat-main__footer-form-btn-send" title="Отправить">
+                              <span class="btn-send__inner">
+                                <span class="visually-hidden btn-send__title">Отправить сообщение</span>
+                                <span class="btn-send__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#send"></use>
+                                  </svg>
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#arrow-type-1"></use>
+                                  </svg>
+                                </span>
+                              </span>
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </footer>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- chat-layout END -->
+        </main>
+      </div>
+      @@include('html/modal.html')
+    </div>
+
+    @@include('html/script.html')
+  </body>
+</html>

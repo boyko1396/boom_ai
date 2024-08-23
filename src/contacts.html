@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Boom AI - Contacts'
+  })
+  <body class="u-scrollbar">
+
+    <div id="root" class="site">
+      <div class="site__inner">
+        <!-- header BEGIN -->
+        @@include('html/components/header-page.html', {
+          'el': 'site__header'
+        })
+        <!-- header END -->
+        <main role="main" class="site__main">
+          <!-- page BEGIN -->
+          <section class="page">
+            <picture class="page__bg">
+              <source
+                srcset="images/contacts-bg.webp"
+                type="image/webp">
+              <img
+                src="images/contacts-bg.jpg"
+                alt="Контакты"
+                width="1920"
+                height="1221">
+            </picture>
+            <div class="container container--size-md page__container">
+              <div class="u-breadcrumbs page__breadcrumbs">
+                <ul class="u-breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+                  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="/" itemprop="item">
+                      <span itemprop="name">Главная</span>
+                    </a>
+                    <meta itemprop="position" content="1">
+                  </li>
+                  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name">Контакты</span>
+                    <meta itemprop="position" content="2">
+                  </li>
+                </ul>
+              </div>
+              <div class="page__contacts">
+                <div class="page__contacts-block">
+                  <h1 class="fs-2 page__contacts-title">Контакты</h1>
+                  <p class="page__contacts-subtitle">Если у вас есть вопросы или предложения, пожалуйста, заполните форму, и&nbsp;наша команда свяжется с&nbsp;вами в&nbsp;ближайшее время</p>
+                  <form action="#" class="page__contacts-form">
+                    <div class="u-input page__contacts-form-input">
+                      <label class="u-input__label">
+                        <input type="text" name="name" class="u-input__el u-input__el--size-sm u-input__el--theme-grey-outline" required placeholder="Ваше имя">
+                      </label>
+                    </div>
+                    <div class="u-input page__contacts-form-input">
+                      <label class="u-input__label">
+                        <input type="email" name="email" class="u-input__el u-input__el--size-sm u-input__el--theme-grey-outline" required placeholder="mail@example.com">
+                      </label>
+                    </div>
+                    <div class="u-input page__contacts-form-input">
+                      <div class="u-input__label">
+                        <input type="tel" name="phone" class="js-input-tel u-input__el u-input__el--size-sm u-input__el--theme-grey-outline" required placeholder="+7 (999) 999 99 99">
+                      </div>
+                    </div>
+                    <div class="page__contacts-form-footer">
+                      <button type="submit" class="btn btn--size-md btn--theme-accent-fill page__contacts-form-btn" disabled>
+                        <span class="btn__inner">
+                          <span class="btn__title">Отправить</span>
+                        </span>
+                      </button>
+                    </div>
+                  </form>
+                  <p class="u-privacy-form page__contacts-privacy">Создавая аккаунт, вы соглашаетесь с нашими <a href="terms.html" target="_blank">Условиями использования</a> и&nbsp;<a href="privacy.html" target="_blank">Политикой конфиденциальности</a></p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- page END -->
+        </main>
+        <!-- footer BEGIN -->
+        @@include('html/components/footer-page.html', {
+          'el': 'site__footer'
+        })
+        <!-- footer END -->
+      </div>
+      @@include('html/modal.html')
+    </div>
+
+    @@include('html/script.html')
+  </body>
+</html>
