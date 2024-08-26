@@ -22,6 +22,9 @@
   }
   &__slider {
     border-radius: $radiusSemi;
+    .swiper-wrapper {
+      align-items: initial;
+    }
     .swiper-slide {
       height: initial;
     }

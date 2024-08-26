@@ -16,7 +16,6 @@
     align-items: center;
     color: $blackColor;
     border-radius: $radiusMd;
-    box-shadow: inset 0 0 0 1px $accentColor;
     @media (max-width: $lg) {
       padding: var(--gap-container);
       justify-content: space-between;

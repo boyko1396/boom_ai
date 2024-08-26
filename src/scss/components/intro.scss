@@ -1,5 +1,11 @@
 .intro {
-  padding: 270rem 0 236rem;
+  height: 100svh;
+  height: calc(var(--vh, 1vh)* 100);
+  min-height: 500rem;
+  padding: 170rem 0 136rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: $whiteColor;
   position: relative;
   z-index: 0;
